@@ -109,7 +109,6 @@ RUN export PATH=$CONDA_DIR/bin:$PATH \
 
 ADD start.sh /usr/local/bin/start.sh
 WORKDIR /notebooks
-ENTRYPOINT ["tini", "--"]
-CMD ["/entrypoint", "start.sh"]
+CMD ["/bin/bash", "start.sh"]
 
 USER $NB_USER
